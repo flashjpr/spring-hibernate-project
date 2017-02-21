@@ -5,7 +5,8 @@ package com.mihaifleseriu.springdemo;
  */
 public class BaseballCoach  implements Coach{
 
+    @Override
     public String getDailyWorkout() {
-        return "Do 20 minutes of threadmill and 20 minutes of Stair Stepper on your level";
+        return "Baseball Coach : Do 20 minutes of threadmill and 20 minutes of Stair Stepper on your level";
     }
 }

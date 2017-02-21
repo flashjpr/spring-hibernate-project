@@ -5,7 +5,8 @@ package com.mihaifleseriu.springdemo;
  */
 public class TrackCoach implements Coach {
 
+    @Override
     public String getDailyWorkout() {
-        return "Run on the threadmill with incline 15% for 20 minutes !";
+        return "Track Coach : Run on the threadmill with incline 15% for 20 minutes !";
     }
 }

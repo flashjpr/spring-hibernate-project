@@ -5,4 +5,7 @@ package com.mihaifleseriu.springdemo;
  */
 public interface Coach {
     public String getDailyWorkout();
+    public default String getDailyFortune(){
+        return "";
+    };
 }

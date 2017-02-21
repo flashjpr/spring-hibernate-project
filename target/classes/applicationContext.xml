@@ -6,7 +6,13 @@
 
 
 
-    <bean id="myCoach" class="com.mihaifleseriu.springdemo.TrackCoach">
+    <bean id="myCoach" class="com.mihaifleseriu.springdemo.TrackCoach"></bean>
 
+    <bean id="baseballCoach" class="com.mihaifleseriu.springdemo.BaseballCoach"></bean>
+
+    <bean id="happyFortune" class="com.mihaifleseriu.springdemo.HappyFortuneService"></bean>
+
+    <bean id="kickboxCoach" class="com.mihaifleseriu.springdemo.KickboxCoach">
+        <constructor-arg index="0" ref="happyFortune"/>
     </bean>
 </beans>
