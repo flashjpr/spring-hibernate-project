@@ -15,4 +15,9 @@
     <bean id="kickboxCoach" class="com.mihaifleseriu.springdemo.KickboxCoach">
         <constructor-arg index="0" ref="happyFortune"/>
     </bean>
+
+    <bean id="cricketCoach" class="com.mihaifleseriu.springdemo.CricketCoach">
+        <property name="fortuneService" ref="happyFortune"></property>
+        <property name="number" value="9"></property>
+    </bean>
 </beans>

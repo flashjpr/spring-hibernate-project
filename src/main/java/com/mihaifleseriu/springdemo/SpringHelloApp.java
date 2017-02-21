@@ -15,12 +15,15 @@ public class SpringHelloApp {
         Coach theCoach = ctx.getBean("myCoach", Coach.class);
         Coach basCoach = ctx.getBean("baseballCoach", Coach.class);
         Coach kickbCoach = ctx.getBean("kickboxCoach", Coach.class);
+        Coach cricketCoach = ctx.getBean("cricketCoach", Coach.class);
 
         // call methods on the bean
         System.out.println(theCoach.getDailyWorkout());
         System.out.println(basCoach.getDailyWorkout());
         System.out.println(kickbCoach.getDailyWorkout());
         System.out.println(kickbCoach.getDailyFortune());
+        System.out.println(cricketCoach.getDailyFortune());
+        System.out.println(cricketCoach.printNumber());
 
         // close the context
         ctx.close();
