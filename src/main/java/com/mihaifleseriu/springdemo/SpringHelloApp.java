@@ -9,21 +9,18 @@ public class SpringHelloApp {
     public static void main(String[] args) {
 
         // load the spring configuration file
-        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring/applicationContext.xml");
 
         // retrieve bean from spring container
         Coach theCoach = ctx.getBean("myCoach", Coach.class);
         Coach basCoach = ctx.getBean("baseballCoach", Coach.class);
         Coach kickbCoach = ctx.getBean("kickboxCoach", Coach.class);
-        Coach cricketCoach = ctx.getBean("cricketCoach", Coach.class);
 
         // call methods on the bean
         System.out.println(theCoach.getDailyWorkout());
         System.out.println(basCoach.getDailyWorkout());
         System.out.println(kickbCoach.getDailyWorkout());
         System.out.println(kickbCoach.getDailyFortune());
-        System.out.println(cricketCoach.getDailyFortune());
-        System.out.println(cricketCoach.printNumber());
 
         // close the context
         ctx.close();

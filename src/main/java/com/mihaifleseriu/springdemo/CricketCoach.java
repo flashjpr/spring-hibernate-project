@@ -6,29 +6,45 @@ package com.mihaifleseriu.springdemo;
 public class CricketCoach implements Coach {
 
     private FortuneService fortuneService;
-    private int number;
-    public CricketCoach() {}
 
-    public void setFortuneService(FortuneService fortuneService) {
-        this.fortuneService = fortuneService;
+
+    private String email;
+    private String team;
+
+    public void setTeam(String team) {
+        this.team = team;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getTeam() {
+        return team;
+    }
+
+
+    public CricketCoach() {
+        System.out.println("Cricket Coach: inside no-arg constructor");
+    }
+
+    public void setFortuneService(FortuneService fortuneService) {
+        System.out.println("Cricket Coach: inside setFortuneService");
+        this.fortuneService = fortuneService;
     }
 
     @Override
     public String getDailyWorkout() {
-        return null;
+        return "Practice fast fawling for 15 minutes";
     }
 
     @Override
     public String getDailyFortune() {
-        return fortuneService.getFortune();
+        return "Inside Cricket Coack" + fortuneService.getFortune();
     }
 
-    @Override
-    public int printNumber() {
-        return number;
-    }
 }

@@ -8,7 +8,4 @@ public interface Coach {
     public default String getDailyFortune(){
         return "";
     };
-    public default int printNumber(){
-        return 0;
-    };
 }
