@@ -5,21 +5,22 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	   					   http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-
+    <!-- load the properties file: sport.properties -->
+    <context:property-placeholder location="classpath:sport.properties"/>
 
     <bean id="myCoach" class="com.mihaifleseriu.springdemo.TrackCoach"></bean>
 
     <bean id="baseballCoach" class="com.mihaifleseriu.springdemo.BaseballCoach"></bean>
 
-    <bean id="happyFortune" class="com.mihaifleseriu.springdemo.HappyFortuneService"></bean>
+    <bean id="happyFortune" class="com.mihaifleseriu.springdemo.FortuneHappy"></bean>
+    <bean id="randomFortune" class="com.mihaifleseriu.springdemo.FortuneRandom"></bean>
 
     <bean id="kickboxCoach" class="com.mihaifleseriu.springdemo.KickboxCoach">
         <constructor-arg index="0" ref="happyFortune"/>
     </bean>
 
-    <context:property-placeholder location="classpath:sport.properties"/>
     <bean id="cricketCoach" class="com.mihaifleseriu.springdemo.CricketCoach">
-        <property name="fortuneService" ref="happyFortune"></property>
+        <property name="fortuneService" ref="randomFortune"></property>
         <property name="email" value="${foo.email}"></property>
         <property name="team" value="${foo.team}"></property>
     </bean>

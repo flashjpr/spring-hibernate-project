@@ -14,17 +14,15 @@ public class CricketCoach implements Coach {
     public void setTeam(String team) {
         this.team = team;
     }
-
     public void setEmail(String email) {
         this.email = email;
     }
 
     public String getEmail() {
-        return email;
+        return "Cricket Coach email: " + email;
     }
-
     public String getTeam() {
-        return team;
+        return "Cricket Team: " + team;
     }
 
 
@@ -39,12 +37,12 @@ public class CricketCoach implements Coach {
 
     @Override
     public String getDailyWorkout() {
-        return "Practice fast fawling for 15 minutes";
+        return "Cricket Coach Workout: Practice fast fawling for 15 minutes";
     }
 
     @Override
     public String getDailyFortune() {
-        return "Inside Cricket Coack" + fortuneService.getFortune();
+        return "Cricket Coach Fortune: " + fortuneService.getFortune();
     }
 
 }
