@@ -22,4 +22,14 @@ public class KickboxCoach implements Coach{
     public KickboxCoach (FortuneService theFortuneService) {
         this.fortuneService = theFortuneService;
     }
+
+    // add an init method - MUST BE PUBLIC VOID
+    public void doMyStartUpJobs() {
+        System.out.println("TrachCoach: inside method doMyStartUpJobs");
+    }
+
+    // add an distroy method - MUST BE PUBLIC VOID
+    public void doMyShutdownJobs() {
+        System.out.println("TrackCoach: inside method doMyShutdownJobs");
+    }
 }

@@ -10,10 +10,8 @@
     <bean id="randomFortune" class="com.mihaifleseriu.springdemo.FortuneRandom"></bean>
 
     <bean id="kickboxCoach" class="com.mihaifleseriu.springdemo.KickboxCoach"
-          scope="prototype"
-          init-method="doMyStartUpJobs"
-          destroy-method="doMyShutdownJobs">
-
-        <constructor-arg index="0" ref="happyFortune"/>
+        init-method="doMyStartUpJobs"
+        destroy-method="doMyShutdownJobs">
+        <constructor-arg index="0" ref="randomFortune"/>
     </bean>
 </beans>
