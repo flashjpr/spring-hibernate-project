@@ -9,7 +9,7 @@ public class SpringHelloApp {
     public static void main(String[] args) {
 
         // load the spring configuration file
-        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring/applicationContext.xml");
+        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
 
         // retrieve bean from spring container
         Coach theCoach = ctx.getBean("myCoach", Coach.class);

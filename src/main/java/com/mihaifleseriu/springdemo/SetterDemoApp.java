@@ -9,7 +9,7 @@ public class SetterDemoApp {
 
     public static void main(String[] args) {
 
-        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring/applicationContext.xml");
+        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
 
         CricketCoach cricketCoach = ctx.getBean("cricketCoach", CricketCoach.class);
         System.out.println(cricketCoach.getDailyWorkout());
